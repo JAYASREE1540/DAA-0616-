@@ -1,6 +1,10 @@
-strings=input("Enter the strings= ").split()
-palin=next((s for s in strings if s==s[::-1]),None)
-if palin:
-    print(f"First Palindrome is {palin}")
-else:
-    print(f"Not Palindrome")
+def first_palindrome(strings):
+    for s in strings:
+        if s == s[::-1]:  # Check if the string is a palindrome
+            return s
+    return "No palindrome found"
+
+# Example usage
+strings = ["apple", "level", "banana", "radar"]
+result = first_palindrome(strings)
+print("First palindrome string:", result)
